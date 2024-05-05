@@ -4,3 +4,11 @@ def board():
              f"|{spots[4]}|{spots[5]}|{spots[6]}|\n"
              f"|{spots[7]}|{spots[8]}|{spots[9]}|")
     print(board)
+
+    # check turn function 
+    def check_turn(turn):
+            if turn % 2 == 0:
+              return 'O'
+            else:
+              return 'X' 
+
