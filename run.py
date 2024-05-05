@@ -1,3 +1,6 @@
-# Your code goes here.
-# You can delete these comments, but do not change the name of this file
-# Write your code to expect a terminal of 80 characters wide and 24 rows high
+#printing the main board
+def board():
+    board = (f"|{spots[1]}|{spots[2]}|{spots[3]}|\n"
+             f"|{spots[4]}|{spots[5]}|{spots[6]}|\n"
+             f"|{spots[7]}|{spots[8]}|{spots[9]}|")
+    print(board)
