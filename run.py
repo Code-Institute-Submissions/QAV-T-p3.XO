@@ -1,7 +1,7 @@
 import os
 
 # Displaying the main board
-def board(spots):
+def draw_board(spots):
     board = (f"| {spots[1]} | {spots[2]} | {spots[3]} |\n"
              f"-------------\n"
              f"| {spots[4]} | {spots[5]} | {spots[6]} |\n"
@@ -9,12 +9,12 @@ def board(spots):
              f"| {spots[7]} | {spots[8]} | {spots[9]} |")
     print(board)
 
-    # check player turn function 
+#check the turn
 def check_turn(turn):
-        if turn % 2 == 0:
-             return 'O'
-        else:
-         return 'X' 
+    if turn % 2 == 1:
+        return 'X'
+    else:
+        return 'O'
 
 def check_for_win(spots):
     # Handle Horizontal Cases
@@ -32,60 +32,58 @@ def check_for_win(spots):
     or (spots[3] == spots[5] == spots[7]):
         return True
     else:
-        return False             
+        return False
 
-# 
 def main():
     while True:
         # Declare all the variables
         spots = {1: '1', 2: '2', 3: '3', 4: '4', 5: '5',
                  6: '6', 7: '7', 8: '8', 9: '9'}
-        playing, complete = True, False
+        playing = True
         turn = 0
         prev_turn = -1
 
         # Game Loop
         while playing:
+            # Reset the screen
             os.system('cls' if os.name == 'nt' else 'clear')
-            board(spots)
-            # If an invalid turn occurred
+            # Draw the current Game Board
+            draw_board(spots)
             if prev_turn == turn:
                 print("Invalid spot selected, please pick another.")
             prev_turn = turn
-            print("Player " + str((turn % 2) + 1) + "'s turn: Pick your spot or press q to quit")
+            print("Player " + check_turn(turn) + "'s turn: Pick your spot or press q to quit")
 
-            # Get the user choice and check its validation
+            # Get input and make sure it's valid
             choice = input()
             if choice == 'q':
-              playing = False
+                playing = False
             elif str.isdigit(choice) and int(choice) in spots:
-                 if not spots[int(choice)] in {"X", "O"}: 
+                # Check if the spot is already taken.
+                if not spots[int(choice)] in {"X", "O"}:
+                    # If not, update board and increment the turn
                     turn += 1
                     spots[int(choice)] = check_turn(turn)
 
-            # Check the end of the game
-            if check_for_win(spots):
-                playing, complete = False, True
-                if turn > 8:
-                    playing = False
-
-
-        # Check winner 
-        if complete:
-            if check_turn(turn) == 'X':
-                print("Player 1 Wins!")
+                    if check_for_win(spots):
+                        os.system('cls' if os.name == 'nt' else 'clear')
+                        draw_board(spots)
+                        print(f"Player {check_turn(turn)} wins!")
+                        playing = False
+                    elif turn == 9:
+                        os.system('cls' if os.name == 'nt' else 'clear')
+                        draw_board(spots)
+                        print("It's a tie!")
+                        playing = False
+                else:
+                    print("Invalid spot selected, please pick another.")
             else:
-                print("Player 2 Wins!")
-        else:
-            # Tie Game
-            print("No Winner") 
+                print("Invalid input. Please enter a number (1-9).")
 
-        restart = input("Do you want to play again? (y/n): ")
-        if restart.lower() != 'y':
+        restart = input("Do you want to play again? (y/n): ").strip().lower()
+        if restart != 'y':
             print("Thanks for playing!")
             break
-                 
-
 
 if __name__ == "__main__":
     main()
