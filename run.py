@@ -69,3 +69,5 @@ def main():
                     playing = False        
 
 
+if __name__ == "__main__":
+    main()
