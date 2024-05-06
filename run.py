@@ -11,7 +11,7 @@ def draw_board(spots):
 
 #check the turn
 def check_turn(turn):
-    if turn % 2 == 1:
+    if turn % 2 == 0:
         return 'X'
     else:
         return 'O'
@@ -62,13 +62,14 @@ def main():
                 # Check if the spot is already taken.
                 if not spots[int(choice)] in {"X", "O"}:
                     # If not, update board and increment the turn
-                    turn += 1
                     spots[int(choice)] = check_turn(turn)
+                    turn += 1
+                    
 
                     if check_for_win(spots):
                         os.system('cls' if os.name == 'nt' else 'clear')
                         draw_board(spots)
-                        print(f"Player {check_turn(turn)} wins!")
+                        print(f"Player {spots[int(choice)]} wins!")
                         playing = False
                     elif turn == 9:
                         os.system('cls' if os.name == 'nt' else 'clear')
@@ -77,8 +78,6 @@ def main():
                         playing = False
                 else:
                     print("Invalid spot selected, please pick another.")
-            else:
-                print("Invalid input. Please enter a number (1-9).")
 
         restart = input("Do you want to play again? (y/n): ").strip().lower()
         if restart != 'y':
