@@ -60,8 +60,12 @@ def main():
             elif str.isdigit(choice) and int(choice) in spots:
                  if not spot[int(choice)] in {"X", "O"}: 
                     turn += 1
-                    spots[int(choice)] = check_turn(turn) 
+                    spots[int(choice)] = check_turn(turn)
+
+            # Check the end of the game
+            if check_for_win(spots):
+                playing, complete = False, True
+                if turn > 8:
+                    playing = False        
 
 
-if __name__ == "__main__":
-    main()
