@@ -34,6 +34,7 @@ def check_for_win(spots):
     else:
         return False             
 
+# 
 def main():
     while True:
         # Declare all the variables
@@ -77,7 +78,13 @@ def main():
                 print("Player 2 Wins!")
         else:
             # Tie Game
-            print("No Winner")               
+            print("No Winner") 
+
+        restart = input("Do you want to play again? (y/n): ")
+        if restart.lower() != 'y':
+            print("Thanks for playing!")
+            break
+                 
 
 
 if __name__ == "__main__":
