@@ -1,6 +1,6 @@
 import os
 
-# Displying the main board
+# Displaying the main board
 def board(spots):
     board = (f"| {spots[1]} | {spots[2]} | {spots[3]} |\n"
              f"-------------\n"
@@ -58,7 +58,7 @@ def main():
             if choice == 'q':
               playing = False
             elif str.isdigit(choice) and int(choice) in spots:
-                 if not spot[int(choice)] in {"X", "O"}: 
+                 if not spots[int(choice)] in {"X", "O"}: 
                     turn += 1
                     spots[int(choice)] = check_turn(turn)
 
@@ -66,7 +66,18 @@ def main():
             if check_for_win(spots):
                 playing, complete = False, True
                 if turn > 8:
-                    playing = False        
+                    playing = False
+
+
+        # Check winner 
+        if complete:
+            if check_turn(turn) == 'X':
+                print("Player 1 Wins!")
+            else:
+                print("Player 2 Wins!")
+        else:
+            # Tie Game
+            print("No Winner")               
 
 
 if __name__ == "__main__":
