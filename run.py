@@ -2,9 +2,11 @@ import os
 
 # Displying the main board
 def board(spots):
-    board = (f"|{spots[1]}|{spots[2]}|{spots[3]}|\n"
-             f"|{spots[4]}|{spots[5]}|{spots[6]}|\n"
-             f"|{spots[7]}|{spots[8]}|{spots[9]}|")
+    board = (f"| {spots[1]} | {spots[2]} | {spots[3]} |\n"
+             f"-------------\n"
+             f"| {spots[4]} | {spots[5]} | {spots[6]} |\n"
+             f"-------------\n"
+             f"| {spots[7]} | {spots[8]} | {spots[9]} |")
     print(board)
 
     # check player turn function 
@@ -33,7 +35,7 @@ def check_for_win(spots):
         return False              
 
 
-    # Get input and make sure it's valid
+    # Get the user choice and check its validation
     choice = input()
     if choice == 'q':
         playing = False
