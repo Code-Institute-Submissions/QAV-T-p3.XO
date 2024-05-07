@@ -8,7 +8,7 @@ Link to the [Game](https://tix-tac-toe-4057f8e53ab2.herokuapp.com)
 3. [Features](#features)
 4. [Future Features](#future-features)
 5. [Technology](#technology)
-6. [Flow Chart](#flow_chart)
+6. [Flow Chart](#flow-chart)
 7. [Testing](#testing)
     - [Code Validation](#code-validation)
     - [Manual Testing](#manual-testing)
@@ -49,7 +49,7 @@ The purpose of this project is to create a simple command-line Tic-Tac-Toe game 
 
 ## Flow Chart
 
-- Using https://lucid.app, to visualize the logic
+ ### Using https://lucid.app, to visualize the logic.
 - ![readme_files](readme_files/flow_chart.png)
 
 ## Testing
