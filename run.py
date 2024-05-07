@@ -15,7 +15,7 @@ def draw_board(spots):
 
 def check_turn(turn):
     """
-    Check the turn of the players
+    Check whose turn it is (X or O).
     """
     if turn % 2 == 0:
         return 'X'
@@ -25,7 +25,7 @@ def check_turn(turn):
 
 def check_for_win(spots):
     """
-    Check all the winning patterns
+    Check if there is a winner.
     """
     # Handle Horizontal Cases
     if (spots[1] == spots[2] == spots[3]) \
@@ -47,7 +47,7 @@ def check_for_win(spots):
 
 def main():
     """
-    Main game function
+    Main game function to run the game.
     """
     while True:
         # Declare all the variables
@@ -66,8 +66,7 @@ def main():
             if prev_turn == turn:
                 print("Invalid spot selected, please pick another.")
             prev_turn = turn
-            print
-            ("Player " + check_turn(turn) + "'s turn: Pick your spot or press q to quit")
+            print("Player " + check_turn(turn) + "'s turn: Pick your spot or press q to quit")
 
             # Get input and make sure it's valid
             choice = input()

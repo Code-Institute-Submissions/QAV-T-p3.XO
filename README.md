@@ -1,32 +1,27 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Tic-Tac-Toe Game
 
-Welcome,
+## Index
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **March 14, 2023**
+1. [Purpose of the Project](#purpose-of-the-project)
+2. [User Stories](#user-stories)
+3. [Features](#features)
+4. [Future Features](#future-features)
+5. [Technology](#technology)
+6. [Testing](#testing)
+    - [Code Validation](#code-validation)
+    - [Manual Testing](#manual-testing)
+7. [Fixed Bugs](#fixed-bugs)
+8. [Deployment](#deployment)
+9. [Credits](#credits)
 
-## Reminders
+## Purpose of the Project
 
-- Your code must be placed in the `run.py` file
-- Your dependencies must be placed in the `requirements.txt` file
-- Do not edit any of the other files or your code may not deploy properly
+The purpose of this project is to create a simple command-line Tic-Tac-Toe game where two players can compete against each other.
 
-## Creating the Heroku app
+## User Stories
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
-
-1. `heroku/python`
-2. `heroku/nodejs`
-
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
-
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
-
-Connect your GitHub repository and deploy as normal.
-
-## Constraints
-
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
-
----
-
-Happy coding!
+- As a player, I want to be able to see the game board displayed clearly.
+- As a player, I want to take turns playing X and O.
+- As a player, I want the game to end when someone wins or it's a tie.
+- As a player, I want the option to play again after the game ends.
+- As a player, I want the option to quit the game at any time.
