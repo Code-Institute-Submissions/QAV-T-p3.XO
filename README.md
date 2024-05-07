@@ -84,7 +84,30 @@ Confirm: The game should exit.
 
 ## Deployment
 
-The project is deployed locally and can be run on any machine with Python installed.
+This project is deployed using the Code Institute template and hosted on Heroku.com. To deploy the project, follow these steps:
+
+**Clone the Repository:**
+- Clone this repository to your local machine using the following command:
+bash
+Copy code
+git clone https://github.com/your-username/your-repository.git
+Replace your-username with your GitHub username and your-repository with the name of your repository.
+**Install Dependencies:**
+- Navigate to the project directory and install the required dependencies using the following command:
+Copy code
+pip install -r requirements.txt
+**Configure Heroku:**
+- Log in to your Heroku account or create a new one at Heroku.com.
+- Create a new Heroku app by clicking on the "New" button and following the prompts.
+**Deploy the App:**
+- Once the Heroku app is created, navigate to the "Deploy" tab.
+- Choose the deployment method (GitHub, GitLab, Bitbucket) and connect your repository.
+- Choose the branch you want to deploy and click on "Deploy Branch".
+**Set Environment Variables:**
+- If your project requires any environment variables, navigate to the "Settings" tab on Heroku.
+- Click on "Reveal Config Vars" and set your environment variables.
+**Open the App:**
+- Once the deployment is complete, click on the "Open App" button to view your deployed project.
 
 ## Credits
 Looked over few sources that I credit
