@@ -56,6 +56,7 @@ The code has been validated using Python's PEP 8 style guide and linted for synt
 **Test 1:** Launch the game.
 - Run the Python script run.py.
 - Verify that the game starts and displays the initial game board.
+- ![readme_files](readme_files/dis_game.png)
 
 **Test 2:** Input invalid spots to check for proper error handling.
 - Enter a non-numeric character as input during the game.
@@ -66,16 +67,21 @@ Confirm: The game should display an error message and prompt the user to enter a
 Confirm: The game should display an error message and prompt the user to enter a valid spot.
 - Enter a number outside the range of 1-9 as input.
 Confirm: The game should display an error message and prompt the user to enter a valid spot.
+- ![readme_files](readme_files/error.png)
 
 **Test 3:** Play a game to completion, ensuring win and tie conditions are detected correctly.
 - Take turns playing the game until someone wins.
 Confirm: The game should detect the winning condition and declare the winner.
+- ![readme_files](readme_files/wins.png)
 - Play the game until all spots are filled and no one wins.
 Confirm: The game should detect the tie condition and declare it's a tie.
+- ![readme_files](readme_files/tie.png)
 - Choose to play again after the game ends.
 Confirm: The game should reset and start a new game.
+- ![readme_files](readme_files/restart_game.png)
 - Choose to quit the game at any time.
 Confirm: The game should exit.
+- ![readme_files](readme_files/quit_confirm.png)
 
 ## Fixed Bugs
 
