@@ -46,6 +46,9 @@ The purpose of this project is to create a simple command-line Tic-Tac-Toe game 
 
 - Python 3
 - OS module for clearing the screen
+- Heroku (for deployment)
+- Gitpod (for cloud-based development)
+- GitHub 
 
 
 ## Flow Chart
@@ -123,6 +126,10 @@ pip install -r requirements.txt
 
 **Open the App:**
 - Once the deployment is complete, click on the "Open App" button to view your deployed project.
+
+**Running the App in Gitpod:**
+- You can run this project in Gitpod, a cloud-based integrated development environment (IDE), by clicking on the following button: [Gitpod](https://qavt-p3xo-4aehhchjmvp.ws-eu111.gitpod.io)
+- This will launch a new workspace with all the project files and dependencies pre-installed, allowing you to code, test, and run the application directly in your browser.
 
 ## Credits
 Looked over few sources that I credit
