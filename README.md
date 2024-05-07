@@ -8,12 +8,13 @@ Link to the [Game](https://tix-tac-toe-4057f8e53ab2.herokuapp.com)
 3. [Features](#features)
 4. [Future Features](#future-features)
 5. [Technology](#technology)
-6. [Testing](#testing)
+6. [Flow Chart](#flow_chart)
+7. [Testing](#testing)
     - [Code Validation](#code-validation)
     - [Manual Testing](#manual-testing)
-7. [Fixed Bugs](#fixed-bugs)
-8. [Deployment](#deployment)
-9. [Credits](#credits)
+8. [Fixed Bugs](#fixed-bugs)
+9. [Deployment](#deployment)
+10. [Credits](#credits)
 
 ## Purpose of the Project
 
@@ -44,7 +45,12 @@ The purpose of this project is to create a simple command-line Tic-Tac-Toe game 
 
 - Python 3
 - OS module for clearing the screen
-- Markdown for README formatting
+
+
+## Flow Chart
+
+- Using https://lucid.app, to visualize the logic
+- ![readme_files](readme_files/flow_chart.png)
 
 ## Testing
 
