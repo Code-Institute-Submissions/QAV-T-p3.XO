@@ -1,7 +1,10 @@
 import os
 
-# Displaying the main board
+ 
 def draw_board(spots):
+    """
+    Displaying the main board
+    """
     board = (f"| {spots[1]} | {spots[2]} | {spots[3]} |\n"
              f"-------------\n"
              f"| {spots[4]} | {spots[5]} | {spots[6]} |\n"
@@ -9,14 +12,21 @@ def draw_board(spots):
              f"| {spots[7]} | {spots[8]} | {spots[9]} |")
     print(board)
 
-#check the turn
+
 def check_turn(turn):
+    """
+    Check the turn of the players
+    """
     if turn % 2 == 0:
         return 'X'
     else:
         return 'O'
 
+
 def check_for_win(spots):
+    """
+    Check all the winning patterns
+    """
     # Handle Horizontal Cases
     if (spots[1] == spots[2] == spots[3]) \
     or (spots[4] == spots[5] == spots[6]) \
@@ -34,7 +44,11 @@ def check_for_win(spots):
     else:
         return False
 
+
 def main():
+    """
+    Main game function
+    """
     while True:
         # Declare all the variables
         spots = {1: '1', 2: '2', 3: '3', 4: '4', 5: '5',
@@ -52,7 +66,8 @@ def main():
             if prev_turn == turn:
                 print("Invalid spot selected, please pick another.")
             prev_turn = turn
-            print("Player " + check_turn(turn) + "'s turn: Pick your spot or press q to quit")
+            print
+            ("Player " + check_turn(turn) + "'s turn: Pick your spot or press q to quit")
 
             # Get input and make sure it's valid
             choice = input()
@@ -64,7 +79,6 @@ def main():
                     # If not, update board and increment the turn
                     spots[int(choice)] = check_turn(turn)
                     turn += 1
-                    
 
                     if check_for_win(spots):
                         os.system('cls' if os.name == 'nt' else 'clear')
@@ -84,5 +98,6 @@ def main():
             print("Thanks for playing!")
             break
 
+
 if __name__ == "__main__":
-    main()
+    main() 
