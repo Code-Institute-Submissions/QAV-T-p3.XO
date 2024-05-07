@@ -95,6 +95,7 @@ This project is deployed using the Code Institute template and hosted on Heroku.
 
 **Clone the Repository:**
 - Clone this repository to your local machine from the [repository](https://github.com/QAV-T/p3.XO)
+  
 **Install Dependencies:**
 - Navigate to the project directory and install the required dependencies using the following command:
 Copy code
